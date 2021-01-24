@@ -15,5 +15,9 @@ class TodosController extends Controller
  {
  	return view('todos.show')->with('todo', $todo);
  }
+public function create()
+{
+	return view('todos.create');
+}
 
 }

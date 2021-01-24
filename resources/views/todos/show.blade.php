@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'single todo')
 @section('content')
 		<h1 class="text-center">{{$todo->name}}</h1>
 

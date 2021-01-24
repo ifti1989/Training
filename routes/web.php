@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('todos', [TodosController::class, 'index'])->name('todos');
 
 Route::get('todos/{todo}', [TodosController::class, 'show']);
+Route::get('new-todos', [TodosController::class, 'create']);
