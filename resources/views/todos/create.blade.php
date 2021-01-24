@@ -10,6 +10,16 @@
 				<div class="card">
 					<div class="card-header"></div>
 					<div class="card-body">
+
+						@if($errors->any())
+							<div class="alert alert-danger">
+								<ul class="list-group">
+									@foreach($errors->all() as $error)
+									<li class="list-group-item">{{$error}}</li>
+									@endforeach
+								</ul>
+							</div>
+						@endif
 						<form action="/store-todos" method="POST">
                            @csrf
                            <div class="form-group">
@@ -18,7 +28,7 @@
                            </div>
                            <div class="form-group">
                            	<label>Description</label>
-                           	<textarea type="text" name="description" class="form-control">
+                           	<textarea type="text" name="description" class="form-control" rows="3">
                             </textarea>
                            </div>
                            <br>
